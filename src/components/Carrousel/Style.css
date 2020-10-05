@@ -1,0 +1,15 @@
+#Carrousel{
+    background: green;
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+    margin-top: 80px;
+    position: relative;
+    box-shadow: 10px 10px 10px #090d11;
+}
+
+@media (max-width: 500px){
+    #Carrousel{
+        margin-top: 60px;
+    }
+}

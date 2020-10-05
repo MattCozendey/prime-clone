@@ -1,0 +1,88 @@
+#searchBarParent{
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 50%;
+}
+
+#searchBar{
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: Amazon Ember;
+    font-size: 1.1rem;
+    outline: transparent;
+}
+
+#nav-glass{
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    opacity: .7;
+}
+
+#nav-glass > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#clearSearchBar{
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    font-family: Amazon Ember;
+    font-weight: 800;
+    font-size: 1rem;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: calc(0% + 10px);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+#clearSearchBar > span{
+    transform: scale(1.1, .8);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.clearSearchBar-active{
+    display: flex !important;
+}
+
+@media (max-width: 1024px){
+    #searchBarParent{
+        border: none;
+    }
+
+    #searchBar{
+        display: none;
+    }
+
+    #nav-glass{
+        margin-left: auto;
+    }
+
+    #clearSearchBar{
+        display: none !important;
+    }
+}
+
+
+.glass-active{
+    opacity: 1 !important;
+}
+
+.search-bar-active{
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+}

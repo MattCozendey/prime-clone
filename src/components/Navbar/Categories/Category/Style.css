@@ -1,0 +1,31 @@
+.nav-category{
+    color: white;
+    font-family: Amazon Ember;
+    font-weight: 500;
+    font-size: 1rem;
+    color:rgba(242, 244, 246, 1);
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+.active{
+    border-bottom: 1px solid white;
+    font-weight: 600;
+}
+
+.nav-mobile-active{
+    display: flex !important;
+}
+
+@media(max-width: 768px){
+    .nav-category{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: none;
+    }
+
+    .nav-category > span{
+        margin-left: 15px;
+    }
+}

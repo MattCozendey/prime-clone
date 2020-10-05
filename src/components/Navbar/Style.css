@@ -1,0 +1,36 @@
+nav{
+    position: fixed;
+    top: 0;
+    background: #0f171e;
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+#navSeparator{
+    margin-left: auto;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+@media (max-width: 500px){
+    nav{
+        height: 60px;
+    }
+    #navSeparator{
+        position: relative;
+        margin-left: 40px;
+        width: 0;
+    }
+}
+
+@media (max-width: 320px){
+    #navSeparator{
+        position: relative;
+        margin-left: 20px;
+        width: 0;
+    }
+}

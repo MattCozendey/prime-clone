@@ -1,0 +1,115 @@
+#userPanelParent{
+    width: 125px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+    margin-left: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+#userPanel{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: .95rem;
+    font-weight: 300;
+    font-family: Amazon Ember;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 70px;
+    transition: color ease-in-out 200ms;
+}
+
+#userPanel:hover{
+    color: white;
+}
+
+#userPanelParent::after{
+    content: "";
+    width: 0px;
+    height: 0px;
+    background: transparent;
+    margin-left: 5px;
+    margin-top: 1px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgba(255, 255, 255, 0.7);
+    transition: transform ease-in-out 200ms;
+}
+
+#userPanelParent::before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: url("https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/adult-1.png");
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 7px;
+    margin-left: -7px;
+}
+
+.modal-active{
+    color: white !important;
+}
+
+.modal-active-arrow::after{
+    transform: rotateZ(180deg);
+    transition: border ease-in-out 200ms;
+    border-top: 4px solid white !important;
+}
+
+@media (max-width: 425px){
+    #userPanelParent::after{
+        display: none;
+    }
+
+    #userPanel{
+        display: none;
+    }
+}
+
+#userModal{
+    position: absolute;
+    top: 72px;
+    right: 0;
+    width: 400px;
+    height: 220px;
+    background: rgb(37, 46, 57);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-shadow: 0 4px 8px #000;
+    display: none;
+}
+.modal-active-modal{
+    display: flex !important;
+}
+#userModal > ul{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    min-width: 50%;
+    justify-content: space-evenly;
+}
+
+#userModal > ul > li{
+    margin-left: 18px;
+    font-family: Amazon Ember;
+    font-size: .9rem;
+    color: white;
+    height: 20px;
+    width: 100%;
+    opacity: .8;
+}
+
+@media (max-width: 768px){
+    #userPanelParent{
+        position: initial;
+    }
+
+    #userModal{
+        width: 100vw;
+    }
+}
