@@ -8,9 +8,6 @@ const CatalogItem = (props) =>{
     const ThisDiv = () =>{
         return document.getElementById("cat-"+props.id);
     }
-    const thisPop = () =>{
-        return document.getElementById("pop-"+props.id);
-    }
     const showPop = () => {
         if(!document.getElementById("pop-"+props.id)){
             const popDiv = document.createElement("div");
@@ -41,16 +38,18 @@ const CatalogItem = (props) =>{
             switch(tag){
                 case "prime":
                     url = PrimeTag;
-                    break;
+                break;
+                default:
+                    return;
             }
 
-            return <img className="catalog-item-tag" id={"cat-tag"+props.id} src={url}></img>
+            return <img className="catalog-item-tag" alt="img" id={"cat-tag"+props.id} src={url}></img>
         }
     }
 
     return <div className="catalogItem" id={"cat-" + props.id} onMouseEnter={showPop} onMouseLeave={hidePop}>
         {hasTag()}
-        <img src={props.url} alt="" srcSet=""/>
+        <img src={props.url} alt="img" srcSet=""/>
     </div>
 }
 

@@ -19,8 +19,10 @@ const CatalogRow = (props) =>{
                 case "prime":
                         src = PrimeTag;
                     break;
+                default:
+                    return;
             }
-            return <img className="catalog-tag" src={src}></img>
+            return <img className="catalog-tag" src={src} alt={props.titles.tag}></img>
         }
     }
     return <div className="catalogRow-parent">

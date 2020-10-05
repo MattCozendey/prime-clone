@@ -11,14 +11,6 @@ const UserPanel = (props) =>{
         userPanelParent.classList.toggle("modal-active-arrow");
         userModal.classList.toggle("modal-active-modal");
     }
-
-    const disableModal = () =>{
-        const userPanel = document.getElementById("userPanel");
-        const userPanelParent = document.getElementById("userPanelParent");
-        const userModal = document.getElementById("userModal");
-
-        console.log("saiu");
-    }
     return <div id="userPanelParent" onClick={toggleModal}>
         <p id="userPanel">{props.userName}...</p>
         <div id="userModal">
